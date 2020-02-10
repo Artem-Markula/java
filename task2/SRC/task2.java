@@ -1,21 +1,27 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.nio.file.FileSystemNotFoundException;
-import java.text.DecimalFormat;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.IntStream;
+
 
 public class task2 {
 
     public static void main(String[] args) throws FileNotFoundException {
+
+        System.out.println("\n///////////////////////////////////////////////////////////////////////");
+        System.out.println("\nЭта программа из 2 задания, из нагрузочного тестирования на работу");
+        System.out.print("Которая проверяет на подобность 2 треугольника\n");
+        System.out.print("Командной строке подается в качестве аргумента путь к файлу\n");
+        System.out.print("С цифрами и другими символами, программа берет координаты для сравнения\n");
+        System.out.print("Пример аргумента C:\\Users\\Администратор\\Desktop\\Geometry.txt\n ");
+        System.out.println("\nВ файле написан следующий формат сравнения 2 треугольников");
+        System.out.println("{triangle1: {A: [x,y,z] , B: [x,y,z], C:[x,y,z]},");
+        System.out.println("{triangle2: {A: [x,y,z] , B: [x,y,z], C:[x,y,z]}}");
+        System.out.println("Вместо x,y,z стоят числа, которые показывают координаты");
+        System.out.println("\n///////////////////////////////////////////////////////////////////////\n");
+
         int g = 0;
         int s = 0;
-        File file = new File("C:\\stdout2.txt");
-        Formatter save = new Formatter(file);
+
         String h[] = new String[100];
         Integer A[] = new Integer[100];
         Integer B[] = new Integer[100];
@@ -42,7 +48,7 @@ public class task2 {
                     for (int i = 0; i < list.size(); i++) {
                         myArray[i] = Integer.valueOf(list.get(i));
                         if (myArray[i] == 0){
-                            myArray[i] = null;
+                            myArray[i] = 1;
 
                         }
                     }
@@ -51,6 +57,7 @@ public class task2 {
                     for (int l = 0; l <= myArray.length; l = l + 7){
                         for (int d = 1; d <= l; d = d + 4){
                             A[d] = myArray[d];
+
                         }
 
                         for (int r = 2; r <= l; r = r + 4){
@@ -142,7 +149,7 @@ public class task2 {
 
 
                 } catch (Exception e) {
-                    System.out.print("Треугольники не подобные");
+                    System.out.print("Файл поврежден");
                 }
 
 
@@ -151,3 +158,4 @@ public class task2 {
             }
         }
     }
+
