@@ -99,7 +99,7 @@ public class task1 {
 
                         try {
                             save.format("%s %s %s", "|", "Значение процентеля получилось ", myArray[value], "\r");
-                            save.format("\r %s \n %s %s %s", "|", "Сумма масива в диапозоне", c, "\r");
+                            save.format("\r %s \n %s %s %s", "|", "Сумма масива в диапозоне", sum, "\r");
 
                             save.close();
                         } catch (Exception e) {
