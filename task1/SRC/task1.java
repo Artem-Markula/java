@@ -2,9 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.nio.file.FileSystemNotFoundException;
 import java.util.*;
-import java.util.stream.IntStream;
 
 public class task1 {
 
@@ -14,8 +12,6 @@ public class task1 {
         int sum = 0;
         int sum4 = 0;
         double sum5 = 0;
-        int sum6 = 0;
-        int c=0;
         int n = 0;
         String h[] = new String[100];
         File file = new File("C:\\stdout.txt");
@@ -32,12 +28,13 @@ public class task1 {
                     while (sc.hasNext()) {
                         g = g + 1;
                         String f = sc.next();
+                        String p = f.replaceAll("[^0123456789]", "");
                         h[s] = j;
-                        h[g] = f;
+                        h[g] = p;
                     }
 
                     List<String> list = new ArrayList<String>(Arrays.asList(h));
-                    list.removeAll(Arrays.asList(":", null));
+                    list.removeAll(Arrays.asList("", null));
 
 
 
@@ -82,7 +79,6 @@ public class task1 {
 
                         for (int z = 0; z < list2.size(); z++) {
                             n = n + 1;
-                            System.out.print(tre);
                             if(list2.get(z) == tre){
                                 sum = sum + list2.get(z);
                             }
@@ -90,12 +86,15 @@ public class task1 {
                                 sum = sum + list2.get(z);
                             }
 
+
+
                     }
 
 
                         System.out.println("Процентиль из 90: " + "Ранг получился " + value + " Значения получилось " + myArray[value]);
-                        System.out.println("Сумма масива в диапозоне равна " + c);
+                        System.out.println("Полученная сумма масива " + sum);
                         System.out.println("Значения записаны в файл stdout");
+
 
                         try {
                             save.format("%s %s %s", "|", "Значение процентеля получилось ", myArray[value], "\r");
