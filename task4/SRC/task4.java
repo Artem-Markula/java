@@ -1,26 +1,12 @@
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.nio.file.FileSystemNotFoundException;
-import java.text.DecimalFormat;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.IntStream;
-
 public class task4 {
 
     public static void main(String[] args) throws FileNotFoundException {
         int g = 0;
         int s = 0;
         int m = 0;
-        int o = 0;
-        int w = 0;
         String x;
-        String y;
-        File file = new File("C:\\stdout2.txt");
-        Formatter save = new Formatter(file);
 
         String h[] = new String[3];
         String a[] = new String[3];
@@ -93,5 +79,6 @@ public class task4 {
             }
         }
     }
+
 
 
