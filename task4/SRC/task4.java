@@ -3,6 +3,14 @@ import java.util.*;
 public class task4 {
 
     public static void main(String[] args) throws FileNotFoundException {
+        System.out.println("\n///////////////////////////////////////////////////////////////////////");
+        System.out.println("\nЭта программа из 4 задания, из нагрузочного тестирования на работу");
+        System.out.print("Которая сравнивает 2 строки, они подаются в виде аргумента командной строке\n");
+        System.out.println("\nЕсли указать строку с * это означает замену любого символа с любым количеством");
+        System.out.println("Если строки одинаковые программа выводит сообщения (ОК)");
+        System.out.println("Если строки не одинаковые программа выводит сообщения (КО)");
+        System.out.println("\n///////////////////////////////////////////////////////////////////////\n");
+
         int g = 0;
         int s = 0;
         int m = 0;
@@ -10,11 +18,9 @@ public class task4 {
 
         String h[] = new String[3];
         String a[] = new String[3];
-        Integer B[] = new Integer[100];
-        Integer C[] = new Integer[100];
 
         if (args.length < 2) {
-            System.out.println("Указана одна или не указана не одна строка в виде аргумента, укажите 2 аргумента");
+            System.out.println("Указана одна или не указана не одна строка в виде аргумента \nУкажите 2 аргумента в виде строки через пробел\nПример: ккк ккк");
 
         } else {
             for (String str : args) {
