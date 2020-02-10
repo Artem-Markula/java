@@ -16,6 +16,7 @@ public class task1 {
         double sum5 = 0;
         int sum6 = 0;
         int c=0;
+        int n = 0;
         String h[] = new String[100];
         File file = new File("C:\\stdout.txt");
         Formatter save = new Formatter(file);
@@ -37,20 +38,20 @@ public class task1 {
 
                     List<String> list = new ArrayList<String>(Arrays.asList(h));
                     list.removeAll(Arrays.asList(":", null));
-                    Collections.sort(list);
+
+
 
                     Integer[] myArray = new Integer[list.size()];
                     for (int i = 0; i < list.size(); i++) {
                         myArray[i] = Integer.valueOf(list.get(i));
+
                     }
 
                     sc.close();
 
                     double average = 0;
 
-                    for (int l = 0; l < myArray.length; l++) {
-                        sum = sum + myArray[l];
-                    }
+
                     for (int l = 0; l < myArray.length; l++) {
                         sum4 = sum4 + 1;
                     }
@@ -72,9 +73,23 @@ public class task1 {
                         double newDouble2 = new BigDecimal(sum5).setScale(3, RoundingMode.UP).doubleValue();
                         int value = (int) newDouble2;
 
-                        for (int m = tre; m < myArray[value]; m++) {
-                            c = c + myArray[m];
-                            System.out.println(c);
+                        List<Integer> list3 = new ArrayList<Integer>(Arrays.asList(myArray));
+                        List<Integer> list2 = new ArrayList<Integer>(Arrays.asList(myArray));
+                        Collections.sort(list2);
+
+
+
+
+                        for (int z = 0; z < list2.size(); z++) {
+                            n = n + 1;
+                            System.out.print(tre);
+                            if(list2.get(z) == tre){
+                                sum = sum + list2.get(z);
+                            }
+                            if(list2.get(z) == myArray[value]){
+                                sum = sum + list2.get(z);
+                            }
+
                     }
 
 
