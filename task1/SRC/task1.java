@@ -75,7 +75,7 @@ public class task1 {
 
                         average = sum2 / myArray.length;
                         double newDouble = new BigDecimal(average).setScale(1, RoundingMode.UP).doubleValue();
-                        System.out.println("Среднее значение " + newDouble);
+                        
                         save.format("%s %s %s", "Среднее значение ", newDouble, "\r");
                         int tre = (int) newDouble;
                         sum5 = 0.9 * sum4;
@@ -101,9 +101,9 @@ public class task1 {
 
                     }
 
-
-                        System.out.println("Процентиль из 90: " + "Ранг получился " + value + " Значения получилось " + myArray[value]);
                         System.out.println("Полученная сумма масива " + sum);
+                        System.out.println("Среднее значение " + newDouble);
+                        System.out.println("Процентиль из 90: " + "Ранг получился " + value + " Значения получилось " + myArray[value]);                
                         System.out.println("Значения записаны в файл stdout");
 
 
