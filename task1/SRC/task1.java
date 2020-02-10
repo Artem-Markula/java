@@ -7,6 +7,18 @@ import java.util.*;
 public class task1 {
 
     public static void main(String[] args) throws FileNotFoundException {
+        System.out.println("\n///////////////////////////////////////////////////////////////////////");
+        System.out.println("\nЭта программа из 1 задания, из нагрузочного тестирования на работу");
+        System.out.print("Которая считает сумму цифр масива, находящиеся в диапозоне между\n");
+        System.out.print("Средним значением и Процентилем из 90\n");
+        System.out.print("Командной строке подается в качестве аргумента путь к файлу\n");
+        System.out.print("С цифрами и другими символами, программа берет цифры для счета\n");
+        System.out.print("Пример аргумента C:\\Users\\Администратор\\Desktop\\As.txt\n ");
+        System.out.println("\nПосле этого эти значения Программа записывает в файл");
+        System.out.println("Под названием stdout он записывается в корень диска C");
+        System.out.println("Помимо суммы, так же программа показывает процентиль и Среднее значение");
+        System.out.println("\n///////////////////////////////////////////////////////////////////////\n");
+
         int g = 0;
         int s = 0;
         int sum = 0;
@@ -70,7 +82,6 @@ public class task1 {
                         double newDouble2 = new BigDecimal(sum5).setScale(3, RoundingMode.UP).doubleValue();
                         int value = (int) newDouble2;
 
-                        List<Integer> list3 = new ArrayList<Integer>(Arrays.asList(myArray));
                         List<Integer> list2 = new ArrayList<Integer>(Arrays.asList(myArray));
                         Collections.sort(list2);
 
@@ -112,4 +123,3 @@ public class task1 {
         }
     }
 }
-
